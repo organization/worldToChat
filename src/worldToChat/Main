@@ -1,0 +1,5 @@
+package worldToChat
+
+public class Main extends PluginBase implements Listener{
+
+}

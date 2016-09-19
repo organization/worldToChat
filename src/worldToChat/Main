@@ -9,5 +9,16 @@ public class Main extends PluginBase implements Listener{
   @EventHandler
   public void onChat(PlayerChatEvent event){
     Set<CommandSender> players = new HashSet<>();
+    if(event.getPlayer().isOp()){
+      return;
+  }else{
+    for (Permissible permissible : Server.getInstance().getPluginManager().getPermissionSubscriptions(Server.BROADCAST_CHANNEL_USERS)) {
+        if (permissible instanceof CommandSender) {
+     if(((CommandSender)permissble).isOp()){
+                    this.recipients.add((CommandSender) permissible);
+                }else{
+    
+    }}
+            }}
 }
 }
